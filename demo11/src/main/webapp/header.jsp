@@ -195,7 +195,7 @@
         </div>
     </div>
 
-    <div class="header--logo content-header">
+    <div class="header--logo content-header" style=" background-color: #17a2b829;">
         <div class="header--logo_large">
             <div class="header--logo_item">
                 <a href="lienhe.html">

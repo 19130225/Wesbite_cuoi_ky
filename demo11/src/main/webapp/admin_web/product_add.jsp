@@ -285,20 +285,20 @@
                                             <%--                                            <label>IMG3</label>--%>
                                             <%--                                            <input name="img3" type="text" class="form-control" required>--%>
                                             <%--                                        </div>--%>
-                                            <div class="form-group">
-                                                <label>idcategogy</label>
-                                                <select name="idcategogy" >
+<%--                                            <div class="form-group">--%>
+<%--                                                <label>idcategogy</label>--%>
+<%--                                                <select name="idcategogy" >--%>
 
-                                                    <%--                                                <c:forEach var="book" items="${pdlistcc}">--%>
-                                                    <%--                                                    <option>${book.idcategogy}</option>--%>
+<%--                                                    &lt;%&ndash;                                                <c:forEach var="book" items="${pdlistcc}">&ndash;%&gt;--%>
+<%--                                                    &lt;%&ndash;                                                    <option>${book.idcategogy}</option>&ndash;%&gt;--%>
 
-                                                    <%--                                                </c:forEach>--%>
-                                                    <c:forEach var="d" items="${listdm}">
-                                                        <option>${d.idcategogy}</option>
-                                                    </c:forEach>
+<%--                                                    &lt;%&ndash;                                                </c:forEach>&ndash;%&gt;--%>
+<%--                                                    <c:forEach var="d" items="${listdm}">--%>
+<%--                                                        <option>${d.idcategogy}</option>--%>
+<%--                                                    </c:forEach>--%>
 
-                                                </select>
-                                            </div>
+<%--                                                </select>--%>
+<%--                                            </div>--%>
 
                                         </div>
                                         <div class="modal-footer">

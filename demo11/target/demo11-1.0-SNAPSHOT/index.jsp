@@ -8,13 +8,7 @@
 <%@page import="com.example.demo11.dao.LanguageImpDao"%>
 
 
-<%--
-  Created by IntelliJ IDEA.
-  User: HP
-  Date: 07/04/2022
-  Time: 3:05 CH
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -52,8 +46,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body style="width: 100%;height: auto">
-<%
+
+<div class="div_mid_contern" style="  ">
+    <body>
+        <%
     Map<String,String> showLanguage = new LanguageImpDao().vietNameseLanguage();
     String lang = (String) session.getAttribute("lang");
     if(lang!=null) {
@@ -64,47 +60,47 @@
         }
     }
 %>
-<div class="dialog overlay" id="my-dialog">
-    <a href="#" class="overlay-close"></a>
+    <div class="dialog overlay" id="my-dialog">
+        <a href="#" class="overlay-close"></a>
 
-    <div class="dialog-body">
+        <div class="dialog-body">
 
 
-        <div class="id" >
+            <div class="id" >
 
-            <div class="img-container">
-                <img src="${auth.avata}" style="margin-right: 190px;" alt="">
-                <div class="title" style="font-size: 17px;
+                <div class="img-container">
+                    <img src="${auth.avata}" style="margin-right: 190px;" alt="">
+                    <div class="title" style="font-size: 17px;
     font-weight: 700;
     color: #292525;">
-                    <h2>${auth.username}</h2>
+                        <h2>${auth.username}</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="maincontainer">
-                <p><i class="infor far fa-file-signature">${auth.name}       Age: ${auth.age}</i></p>
+                <div class="maincontainer">
+                    <p><i class="infor far fa-file-signature">${auth.name}       Age: ${auth.age}</i></p>
 
-                <p><img src="assets/icon/email.png" style="height: 20px;width: 20px;"><i class="infor">${auth.email}</i></p>
-                <p><i class="infor bx bx-phone-call" style="margin-left: -4%;padding-right: 40px">          ${auth.phone}</i></p>
-                <hr>
-                <p><b><i class="infor"></i></b></p>
-                <p>Diem tich luy</p>
-                <div class="skill">
-                    <div class="bar" style="width: 70%;">${auth.hide}</div>
+                    <p><img src="assets/icon/email.png" style="height: 20px;width: 20px;"><i class="infor">${auth.email}</i></p>
+                    <p><i class="infor bx bx-phone-call" style="margin-left: -4%;padding-right: 40px">          ${auth.phone}</i></p>
+                    <hr>
+                    <p><b><i class="infor"></i></b></p>
+                    <p>Diem tich luy</p>
+                    <div class="skill">
+                        <div class="bar" style="width: 70%;">${auth.hide}</div>
+                    </div>
+                    <button class="btn">More</button>
+                    <div class="folow">fOLOW ME</div>
+                    <div class="soc">
+                        <id class="fa"><i class="fab fa-youtube"></i></id>
+                        <id class="fa"><i class="fab fa-instagram"></i></id>
+                        <id class="fa"><i class="fab fa-twitter"></i></id>
+                        <id class="fa"><i class="fab fa-facebook-f"></i></id>
+                    </div>
+
+
                 </div>
-                <button class="btn">More</button>
-                <div class="folow">fOLOW ME</div>
-                <div class="soc">
-                    <id class="fa"><i class="fab fa-youtube"></i></id>
-                    <id class="fa"><i class="fab fa-instagram"></i></id>
-                    <id class="fa"><i class="fab fa-twitter"></i></id>
-                    <id class="fa"><i class="fab fa-facebook-f"></i></id>
-                </div>
-
-
             </div>
         </div>
     </div>
-</div>
 </div>
 <div id="showcart" class="list_cart" style="margin-top: 400px;margin-right: 200px;z-index: 99;background: #f0f0f0">
     <table id="cart" class=" table table-hover"  style="" >
@@ -176,6 +172,21 @@
             <%=showLanguage.get("Call us 03-087-0976")%>
             <img src="assets/icon/email.png" style="height: 20px;width: 20px;margin-left: 2%;margin-right: 10px;" alt="">
             19130225@st.hcmuaf.edu.vn
+            <div style="display: flex;justify-content: center">
+                <button style=" width: 120px;
+    height: 35px;
+    background-color: green;
+    color: whitesmoke;
+    margin-top: 0px;margin-left: 5px"> <%=showLanguage.get("Select language")%></button>
+                <div class="dropdown " style="width: 20px;margin-top: 1px">
+                    <button class="btn btn-success dropdown-toggle" style="height: 32px;margin: auto" type="button" data-toggle="dropdown"><i class="fas fa-globe-asia"></i>
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="international?lang=VietNamese"><%=showLanguage.get("Vietnamese")%></a></li>
+                        <li><a href="international?lang=English"><%=showLanguage.get("English")%></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="header--contact__">
@@ -215,7 +226,7 @@
         </div>
     </div>
 
-    <div class="header--logo content-header">
+    <div class="header--logo content-header" style="background-color: #17a2b829;">
 
         <div class="header--logo_large">
             <div class="header--logo_item">
@@ -373,15 +384,7 @@
                 <nav>
                     <div class="navbar">
                         <i class='bx bx-menu'></i>
-                        <button> <%=showLanguage.get("Select language")%></button>
-                        <div class="dropdown " style="width: 300px">
-                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-globe-asia"></i>
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="international?lang=VietNamese"><%=showLanguage.get("Vietnamese")%></a></li>
-                                <li><a href="international?lang=English"><%=showLanguage.get("English")%></a></li>
-                            </ul>
-                        </div>
+
 
                         <div class="nav-links">
                             <ul class="links">
@@ -452,10 +455,13 @@
     </div>
 </div>
 <container>
-    <section id="home">
+
+
+
+    <section id="home" style="background-color: #fd14141f;">
         <div class="container margin-content">
             <!-- container--banner -->
-            <div class="slider " style="text-transform: uppercase">
+            <div class="slider " style="text-transform: uppercase; width: 100%;margin-left: -5%">
                 <!-- fade css -->
                 <div class="myslide fade">
                     <div class="txt">
@@ -484,7 +490,7 @@
                         </h1>
                         <p style="color: #28a745">
                             <%=showLanguage.get("Luxurious") %>
-                             </p>
+                        </p>
                     </div>
                     <img src="https://png.pngtree.com/png-clipart/20210313/ourlarge/pngtree-3d-top-3-trophy-gold-png-image_3038902.jpg" style="width: 100%; height: 100%;"class="imgslider">
                 </div>
@@ -502,7 +508,7 @@
                 <div class="myslide fade">
                     <div class="txt">
                         <h1> <%=showLanguage.get("Thank for watching") %>
-                           </h1>
+                        </h1>
                         <p style="color: green"> <%=showLanguage.get("Web Developer") %><br> <%=showLanguage.get("Subscribe") %></p>
                     </div>
                     <img src="https://st.quantrimang.com/photos/image/2021/08/27/hinh-anh-cam-on-16.jpg" style="width: 100%; height: 100%;" class="imgslider">
@@ -541,7 +547,9 @@
     <section class="align-items-center bg-img bg-img-fixed" id="drink-menu-section"
     <%--             style="background-image: url();">--%>
     <div class="container1 " >
-        <div class="drink-menu">
+        <div class="drink-menu" style="
+         width: 100%;
+    background-color: palegoldenrod;">
             <h1>
                 <span class="primary-color"></span> <%=showLanguage.get("Choose")%>
             </h1>
@@ -1272,6 +1280,9 @@
 </script>
 
 </body>
+</div>
+
+
 
 
 </html>

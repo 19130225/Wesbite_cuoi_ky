@@ -33,7 +33,7 @@
 <body id="page-top">
 
 <jsp:include page="header.jsp"></jsp:include>
-<section class="page-section">
+<section class="page-section" style="background-color: #17a2b829">
     <div class="container">
         <div class="row">
 
@@ -69,12 +69,12 @@
 <%--                    </form>--%>
     <form action="SearchAjaxProduct" method="post" class="form-inline my-2 my-lg-0">
         <div class="input-group input-group-sm">
-            <input oninput="searchByName(this)" value="${txtS}" name="txt" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-secondary btn-number">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
+            <input oninput="searchByName(this)" value="${txtS}" name="txt" type="text" class="form-control" style="width: 100px;height: 50px" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+<%--            <div class="input-group-append">--%>
+<%--                <button type="submit" class="btn btn-secondary btn-number">--%>
+<%--                    <i class="fa fa-search"></i>--%>
+<%--                </button>--%>
+<%--            </div>--%>
         </div>
 
     </form>
@@ -100,35 +100,36 @@
             <!--END  <div class="col-lg-3 blog-form">-->
 
             <div class="col-lg-9" style="padding-left: 30px;">
-                <div class="row">
-                    <div class="col">
-                        Showing all 9 results
-                    </div>
+<%--                <div class="row">--%>
+<%--                    <div class="col">--%>
+<%--                        Showing all 9 results--%>
+<%--                    </div>--%>
 
-                    <div class="col">
-                        <select class="form-control">
-                            <option value="">Default Sorting</option>
-                            <option value="popularity">Sorting by popularity</option>
-                            <option value="average">Sorting by average</option>
-                            <option value="latest">Sorting by latest</option>
-                            <option value="low">Sorting by low</option>
-                            <option value="high">Sorting by high</option>
-                        </select>
-                    </div>
+<%--                    <div class="col">--%>
+<%--                        <select class="form-control">--%>
+<%--                            <option value="">Default Sorting</option>--%>
+<%--                            <option value="popularity">Sorting by popularity</option>--%>
+<%--                            <option value="average">Sorting by average</option>--%>
+<%--                            <option value="latest">Sorting by latest</option>--%>
+<%--                            <option value="low">Sorting by low</option>--%>
+<%--                            <option value="high">Sorting by high</option>--%>
+<%--                        </select>--%>
+<%--                    </div>--%>
 
-                </div>
+<%--                </div>--%>
                 <!-- Sorting by <div class="row"> -->
-                <div>&nbsp;</div>
-                <div>&nbsp;</div>
+<%--                <div>&nbsp;</div>--%>
+<%--                <div>&nbsp;</div>--%>
 
                 <div class="row" id="content">
 <c:forEach items="${pdlist}" var="p">
                     <div class="col-sm-3 col-md-6 col-lg-4">
-                        <div class="card">
+                        <div class="card " style="background-color: #28a74578;margin-bottom: 5px">
                             <div class="card-body text-center">
                                 <img src="${p.img}" class="product-image">
-                                <h5 class="card-title"><b>Accessory</b></h5>
-                                <p class="card-text small">${p.name}</p>
+<%--                                <h5 class="card-title"><b>Accessory</b></h5>--%>
+                                <p class="card-text small" style="color: darkgreen;
+    font-size: 1.5rem;">${p.name}</p>
                                 <p class="tags">${p.price}</p>
                                 <a href="cart-add?id=${p.id}"  class="btn btn-success button-text"><i class="fa fa-shopping-cart" ></i> Add to cart</a>
                             </div>
@@ -149,7 +150,14 @@
         </div>
     </div>
 </section>
-<button style="margin-top: 10%;border-radius: 10px;padding: 20px;background: #272d40;color: #f0f0f0" onclick="Loadmore()">Load</button>
+<button style="margin-top: 0;
+    border-radius: 10px;
+    padding: 20px;
+    background: #272d40;
+    color: #f0f0f0;
+    margin-left: 50%;
+    width: 100px;
+}" onclick="Loadmore()">Load</button>
 
 <div>&nbsp;</div>
 <div>&nbsp;</div>
